@@ -1,0 +1,121 @@
+/* 
+File: pacific.css
+GUI Assignment: HW2 Style a Site with External CSS
+Michael McGilvray, michael_mcgilvray@student.uml.edu
+Copyright (c) 2021 by Michael McGilvray. All rights reserved. May be freely 
+copied or excerpted for educational purposes with credit to the author.
+updated by MM on September 27, 2021 at 12:00PM
+
+This site serves as a learning exercise to understand how to style a site
+with external css. Given an html file and a few images of the original site,
+the goal was to recreate the site using only css. The images of the original
+site can be found in /Original-Site in the GitHub repository.
+*/
+
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+	display: block;
+}
+body{
+	/* Background gradient */
+	background-image: url(ptrbackground.jpg);
+	background-repeat: repeat-x;
+	background-color: #00569f;
+	color: #666666;
+	font-family: Arial, Helvetica, sans-serif;
+}
+h1,h2{
+	font-family: Georgia, "Times New Roman", serif;
+}
+h2{
+	color: #3399CC;
+}
+dt{
+	color: #000033;
+}
+
+
+/* Wrapper holds the header, nav bar, content, and footer */
+#wrapper{
+	position: relative;
+	width: 80%;
+	min-width: 600px;
+	margin: auto;
+	background: white;
+}
+
+
+/* ===Header=== */
+header{
+	height: 56px;
+	background: #000032;
+	background-image: url(sunset.jpg);
+	background-position: right;
+	background-repeat: no-repeat;
+}
+header h1{
+	padding: 10px;
+	margin: 0;
+	color: white
+}
+
+
+/* ===Navigation bar=== */
+nav{
+	position: absolute;
+	width: 200px;
+	/* Make the nav bar go to the bottom of the wrapper but subtract
+	56px because of the height of the header */
+	height: calc(100% - 56px);
+	background: #8DC6E4;
+}
+nav ul{
+	list-style: none;
+	padding-left: 20px;
+	font-size: 1.2em;
+}
+nav a{
+	text-decoration: none;
+	color: #000032;
+	font-weight: bold;
+}
+nav a:hover{
+	color: #FFFFFF;
+}
+
+
+/* ===Content=== */
+#content{
+	margin-left: 200px;
+	padding-left: 25px;
+}
+#content img{
+	float: left;
+	margin-right: 20px;
+}
+#content p{
+	padding-right: 15px;
+}
+#content ul li{
+	padding-right: 15px;
+	/* Custom bullet points that inline with the rest of the text */
+	list-style: url(marker.gif);
+	list-style-position: inside;
+}
+.resort{
+	color: #5680a0;
+	font-weight: bold;
+}
+#contact{
+	font-size: 90%;
+}
+
+
+/* ===Footer=== */
+footer{
+	margin: 50px 20px 20px 200px;
+	padding-left: 25px;
+	padding-bottom: 20px;
+	font-family: Georgia, "Times New Roman", serif;
+	font-style: italic;
+	font-size: 12px;
+}
